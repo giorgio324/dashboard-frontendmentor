@@ -1,38 +1,341 @@
-.App {
-  text-align: center;
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Lightred-work: hsl(15, 100%, 70%);
+  --Softblue-play: hsl(195, 74%, 62%);
+  --Lightred-study: hsl(348, 100%, 68%);
+  --Limegreen-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Softorange-self-care: hsl(43, 84%, 65%);
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+  --White: hsl(0, 0%, 100%);
+  --ff-primary: 'Rubik', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--ff-primary);
+  background: var(--Darkblue);
+  color: var(--White);
+  font-weight: 300;
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* end of css reset */
+.main-container {
+  background: hsl(226, 43%, 10%);
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container,
+.activities-container {
+  width: 90vw;
+}
+
+.profile-container {
+  margin: 1rem 0;
+}
+
+.user-info-container {
+  background: var(--Blue);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  color: var(--PaleBlue);
+  font-weight: 300;
+  transform: translateY(5%);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.time-select-container,
+.activity-content {
+  background: var(--Darkblue);
+  padding: 2rem 1rem;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+.time-select-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-image {
+  width: 70px;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+
+.user-name {
+  width: 100%;
+  font-size: 20px;
+  color: var(--White);
+  font-weight: 300;
+}
+
+.btn-time {
+  background: transparent;
+  color: var(--PaleBlue);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.btn-time:hover {
+  color: var(--White);
+}
+
+.active {
+  color: var(--White);
+}
+
+/* activities */
+
+.activity-header {
+  height: 2.75rem;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.work {
+  background-image: url(images/icon-work.svg);
+  background-color: var(--Lightred-work);
+}
+
+.game {
+  background-image: url(images/icon-play.svg);
+  background-color: var(--Softblue-play);
+}
+
+.read {
+  background-image: url(images/icon-study.svg);
+  background-color: var(--Lightred-study);
+}
+
+.run {
+  background-image: url(images/icon-exercise.svg);
+  background-color: var(--Limegreen-exercise);
+}
+
+.chat {
+  background-image: url(images/icon-social.svg);
+  background-color: var(--Violet-social);
+}
+
+.health {
+  background-image: url(images/icon-self-care.svg);
+  background-color: var(--Softorange-self-care);
+}
+
+.activity-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-8%);
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  padding: 3rem 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.activity-content:hover {
+  background: var(--Desaturatedblue);
+}
+
+.left,
+.right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+.right {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right p {
+  font-size: 16px;
+  color: var(--PaleBlue);
+  padding-top: 2.25rem;
+}
+
+.left h6,
+h4 {
+
+  font-weight: 500;
+}
+
+.left h4 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.left h6 {
+  font-size: 18px;
+}
+
+.dots {
+  width: 22px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 700px) {
+  .main-container {
+    min-height: 100vh;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .activities-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .main-container {
+    justify-content: center;
+  }
+
+  .dashboard {
+    display: flex;
+  }
+
+  .profile-container,
+  .activities-container {
+    width: auto;
+  }
+
+  .activities-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .profile-container {
+    margin: 0;
+    transform: translateY(-2.5%);
+    margin: 0 1.5rem;
+  }
+
+  .user-name {
+    font-size: 25px;
+    width: 50%;
+  }
+
+  .user-info {
+    padding: 1.5rem 0;
+  }
+
+  .user-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  .user-info-container {
+    background: var(--Blue);
+    border-radius: 14px;
+    padding: 1.75rem 2.25rem;
+    color: var(--PaleBlue);
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+
+  .time-select-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  .activity-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .left h4 {
+    font-size: 40px;
+  }
+
+  .left,
+  .right {
+    padding: 0.5rem;
+  }
+
+  .left {
+    padding-right: 4.5rem;
+  }
+
+  .right {
+    position: unset;
+  }
+
+  .right p {
+    padding-top: 0.25rem;
+    width: 100%;
+  }
+
+  .dots {
+    right: 10%;
+    top: 20%;
   }
 }
