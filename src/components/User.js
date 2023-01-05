@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import userPhoto from '../images/image-jeremy.png';
 import { useGlobalContext } from './context';
 function User() {
-  const { time, displayPage } = useGlobalContext();
+  const { displayPage } = useGlobalContext();
   return (
     <div className='profile-container'>
       <div className='user-info-container'>
