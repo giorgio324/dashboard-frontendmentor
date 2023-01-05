@@ -153,27 +153,27 @@ img {
   background-color: var(--Lightred-work);
 }
 
-.game {
+.play {
   background-image: url(images/icon-play.svg);
   background-color: var(--Softblue-play);
 }
 
-.read {
+.study {
   background-image: url(images/icon-study.svg);
   background-color: var(--Lightred-study);
 }
 
-.run {
+.exercise {
   background-image: url(images/icon-exercise.svg);
   background-color: var(--Limegreen-exercise);
 }
 
-.chat {
+.social {
   background-image: url(images/icon-social.svg);
   background-color: var(--Violet-social);
 }
 
-.health {
+.self-care {
   background-image: url(images/icon-self-care.svg);
   background-color: var(--Softorange-self-care);
 }

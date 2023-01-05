@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import userPhoto from '../images/image-jeremy.png';
-
+import { useGlobalContext } from './context';
 function User() {
+  const { time, displayPage } = useGlobalContext();
   return (
     <div className='profile-container'>
       <div className='user-info-container'>
@@ -12,16 +13,13 @@ function User() {
         </div>
       </div>
       <div className='time-select-container'>
-        <button
-          className='btn-time active'
-          onClick={(e) => console.log(e.target)}
-        >
+        <button className='btn-time active' onClick={(e) => displayPage(e)}>
           Daily
         </button>
-        <button className='btn-time' onClick={() => console.log('clicked')}>
+        <button className='btn-time' onClick={(e) => displayPage(e)}>
           Weekly
         </button>
-        <button className='btn-time' onClick={() => console.log('clicked')}>
+        <button className='btn-time' onClick={(e) => displayPage(e)}>
           Monthly
         </button>
       </div>

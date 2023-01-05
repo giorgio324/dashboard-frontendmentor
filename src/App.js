@@ -5,8 +5,8 @@ function App() {
   return (
     <main className='main-container'>
       <section className='dashboard'>
-        <User></User>
-        <Activities></Activities>
+        <User />
+        <Activities />
       </section>
     </main>
   );
