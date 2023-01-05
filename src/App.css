@@ -87,7 +87,7 @@ img {
   padding: 2rem 1.5rem;
   color: var(--PaleBlue);
   font-weight: 300;
-  transform: translateY(5%);
+  transform: translateY(7%);
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -97,7 +97,7 @@ img {
 .time-select-container,
 .activity-content {
   background: var(--Darkblue);
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
 }
@@ -185,7 +185,7 @@ img {
   transform: translateY(-8%);
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   transition: var(--transition);
   cursor: pointer;
 }
@@ -241,6 +241,11 @@ h4 {
     align-items: center;
   }
 
+
+  .time-select-container {
+    padding: 2rem;
+  }
+
   .activities-container {
     display: grid;
     gap: 1rem;
@@ -290,6 +295,7 @@ h4 {
     background: var(--Blue);
     border-radius: 14px;
     padding: 1.75rem 2.25rem;
+    transform: translateY(5%);
     color: var(--PaleBlue);
     font-weight: 300;
     display: flex;
@@ -300,6 +306,7 @@ h4 {
   }
 
   .time-select-container {
+    padding: 2rem 1.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
